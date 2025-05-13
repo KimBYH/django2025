@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+</head>
+<body>
+<H1>product</H1>
+{% if content_list %}
+    {% for content in content_list %}
+        <hr/>
+        <h3><a href="/product/{{contnent.id}}/">{{content.title}}</a></h3>
+        <H5>{{content.content}}</H5>
+    {% endfor %}
+{% else %}
+    <p>contnent가 없습니다.</p>
+{% endif%}
+</body>
+</html>
