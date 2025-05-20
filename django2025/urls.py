@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("product/", include("product.urls")),
     path("", include("pages.urls")),
+    path("accounts/", include("accounts.urls"))
     # 여기에 다른 앱(app)의 URLconf를 포함시킬 수 있습니다.
     # 예: path('myapp/', include('myapp.urls')),
 ]

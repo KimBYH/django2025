@@ -1,0 +1,405 @@
+/* 기본 스타일 초기화 또는 설정 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* 중앙 정렬 및 상하 여백 */
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featured-books h2, .categories h2, .new-arrivals h2, .best-sellers h2, .newsletter-signup h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    /* 추가된 섹션 제목 스타일도 함께 적용 */
+}
+
+.book-list {
+    display: flex; /* 책 아이템들을 가로로 나열 */
+    flex-wrap: wrap; /* 화면이 좁아지면 줄 바꿈 */
+    gap: 20px; /* 아이템 간 간격 */
+    justify-content: center; /* 중앙 정렬 */
+    margin-bottom: 30px; /* 섹션 하단 여백 추가 */
+}
+
+.book-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    width: 200px; /* 아이템 너비 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease; /* 호버 효과를 위한 전환 추가 */
+}
+
+.book-item:hover {
+    transform: translateY(-5px); /* 호버 시 약간 위로 올리는 효과 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 강조 */
+}
+
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    white-space: nowrap; /* 제목이 너무 길 경우 줄바꿈 방지 */
+    overflow: hidden; /* 넘치는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 숨겨진 텍스트를 ...으로 표시 */
+}
+
+.book-item .author {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-item .price {
+    font-size: 1.1rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.buy-button {
+    display: inline-block; /* 버튼처럼 보이게 */
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+    background: #0056b3;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px; /* 섹션 하단 여백 추가 */
+}
+
+.categories ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.categories ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* 호버 효과를 위한 전환 추가 */
+}
+
+.categories ul li a:hover {
+    color: #0056b3; /* 호버 시 색상 변경 */
+    text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
+
+/* 뉴스레터 구독 섹션 스타일 추가 */
+.newsletter-signup {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #e9ecef; /* 배경색 추가 */
+    border-radius: 8px;
+    margin-bottom: 30px; /* 섹션 하단 여백 추가 */
+}
+
+.newsletter-signup h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.newsletter-signup p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.newsletter-signup form {
+    display: flex; /* 입력 필드와 버튼을 가로로 나열 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 10px; /* 요소 간 간격 */
+    flex-wrap: wrap; /* 작은 화면에서 줄 바꿈 */
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 250px; /* 입력 필드 너비 */
+    max-width: 80%; /* 반응형을 위한 최대 너비 */
+}
+
+.newsletter-signup button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745; /* 버튼 배경색 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-signup button[type="submit"]:hover {
+    background-color: #218838; /* 호버 시 색상 변경 */
+}
+
+/* 이미지 슬라이더 스타일 - 병합 */
+.image-slider {
+    position: relative; /* 자식 요소(버튼, 캡션)의 위치 기준 */
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+    max-width: 1200px; /* 최대 너비 설정 (콘텐츠 중앙 정렬 시 유용) */
+    margin: 0 auto 30px auto; /* 위쪽 여백은 없애고, 아래쪽 여백 및 중앙 정렬 */
+    overflow: hidden; /* 슬라이더 컨테이너 밖으로 나가는 이미지 숨김 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    border-radius: 8px; /* 모서리 둥글게 */
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* 트랙이 컨테이너 밖으로 나가지 않도록 숨김 */
+}
+
+.slider-track {
+    display: flex; /* 자식 요소(슬라이드)를 가로로 나열 */
+    transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 설정 */
+    /* JavaScript에서 transform: translateX(...)를 사용하여 위치를 이동시킬 것입니다. */
+}
+
+.slide {
+    min-width: 100%; /* 각 슬라이드가 슬라이더 컨테이너의 너비만큼 차지 */
+    box-sizing: border-box; /* 패딩, 보더가 너비 계산에 포함되도록 */
+    position: relative; /* 캡션 위치 기준 */
+    display: flex; /* 내부 콘텐츠 정렬을 위해 */
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    display: block; /* 이미지 아래 미세한 여백 제거 */
+    width: 100%; /* 슬라이드 너비에 맞게 이미지 크기 조절 */
+    height: auto; /* 이미지 비율 유지 */
+    /* object-fit: cover; 를 사용하면 이미지가 잘리더라도 컨테이너를 꽉 채웁니다. */
+}
+
+.slide-caption {
+    position: absolute; /* 이미지 위에 텍스트 오버레이 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정중앙 정렬 */
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
+    padding: 20px 30px;
+    border-radius: 10px;
+    z-index: 5; /* 이미지 위에 표시되도록 */
+    max-width: 80%; /* 캡션 너비 제한 */
+}
+
+.slide-caption h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.slide-caption p {
+     font-size: 1.1rem;
+     margin-bottom: 20px;
+}
+
+.slide-caption .cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.slide-caption .cta-button:hover {
+    background: #0056b3;
+}
+
+/* 슬라이드 네비게이션 버튼 스타일 - 병합 */
+.prev-button, .next-button {
+    position: absolute; /* 슬라이더 컨테이너 기준 위치 */
+    top: 50%;
+    transform: translateY(-50%); /* 세로 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    z-index: 10; /* 슬라이드나 캡션보다 위에 표시 */
+    border-radius: 5px;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    /* 사용자가 텍스트를 선택하지 못하도록 */
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 15px;
+}
+
+.next-button {
+    right: 15px;
+}
+
+/* 슬라이드 페이지 표시 점 스타일 - 병합 */
+.slider-dots {
+    text-align: center;
+    margin-top: 15px;
+    position: absolute; /* 슬라이더 섹션 기준 위치 */
+    bottom: 15px; /* 슬라이더 하단에 위치 */
+    left: 50%;
+    transform: translateX(-50%); /* 가로 중앙 정렬 */
+    z-index: 10;
+}
+
+.dot {
+    display: inline-block; /* 가로로 나열 */
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.5); /* 반투명 흰색 점 */
+    border-radius: 50%; /* 원형 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #fff; /* 활성화된 점은 불투명 흰색 */
+}
+
+/* 푸터 스타일 */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* 기본적인 반응형 조정 (필요에 따라 추가/수정) - 병합 */
+@media (max-width: 768px) {
+    .slide-caption h2 {
+        font-size: 1.5rem;
+    }
+    .slide-caption p {
+        font-size: 1rem;
+    }
+    .prev-button, .next-button {
+        padding: 10px 15px;
+        font-size: 1.5rem;
+    }
+     .prev-button { left: 10px; }
+     .next-button { right: 10px; }
+
+    .newsletter-signup form {
+        flex-direction: column; /* 세로로 나열 */
+        align-items: center;
+    }
+    .newsletter-signup input[type="email"] {
+        width: 80%;
+        max-width: 300px; /* 최대 너비 제한 */
+    }
+    .newsletter-signup button[type="submit"] {
+         width: 80%;
+         max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+     .slide-caption {
+         padding: 15px;
+     }
+    .slide-caption h2 {
+        font-size: 1.2rem;
+    }
+    .slide-caption p {
+        display: none; /* 작은 화면에서 설명 숨김 */
+    }
+     .prev-button, .next-button {
+         padding: 8px 10px;
+         font-size: 1.2rem;
+         top: auto; /* 상단 50% 대신 하단에 위치 */
+         bottom: 50px; /* 점과 겹치지 않게 */
+     }
+     .prev-button { left: 5px; }
+     .next-button { right: 5px; }
+     .slider-dots {
+         bottom: 10px;
+     }
+
+     .book-item {
+         width: 150px; /* 더 작은 화면에서 아이템 너비 줄임 */
+     }
+     .book-item h3 {
+        font-size: 1.1rem;
+     }
+    .book-item .author, .book-item .price {
+         font-size: 0.85rem;
+     }
+     .buy-button {
+         padding: 8px 12px;
+         font-size: 0.9rem;
+     }
+}

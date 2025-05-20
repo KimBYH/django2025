@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product</title>
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
 <H1>product</H1>
 {% if content_list %}
@@ -16,4 +12,4 @@
     <p>contnent가 없습니다.</p>
 {% endif%}
 </body>
-</html>
+{% endblock%}
