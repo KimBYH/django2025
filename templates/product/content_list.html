@@ -4,6 +4,14 @@
 <H1>product</H1>
 {% if content_list %}
     {% for content in content_list %}
+        {% if comment.main_image %}
+            <img class="img-fluid rounded mb-4 mb-lg-0" src="{{content.main_image.url}}"
+                 alt="main_image" />
+        {% else %}
+            <img class="img-fluid rounded mb-4 mb-lg-0"
+src=https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." />
+        {% endif %}
+
         <hr/>
         <h3><a href="/product/{{contnent.id}}/">{{content.title}}</a></h3>
         <H5>{{content.content}}</H5>

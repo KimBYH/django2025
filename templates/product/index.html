@@ -7,7 +7,15 @@
                     {% if content_list %}
                         {% for content in content_list %}
                             <div class="row gx-4 gx-lg-5 align-items-center my-5">
-                                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+                                <div class="col-lg-7">
+                                    {% if content.main_image %}
+                                        <img class="img-fluid rounded mb-4 mb-lg-0" src="{{content.main_image.url}}"
+                                             alt="main_image" />
+                                    {% else %}
+                                        <img class="img-fluid rounded mb-4 mb-lg-0"
+                                            src=https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." />
+                                    {% endif %}
+                                </div>
                                 <div class="col-lg-5">
                                     <h3>{{content.title}}</a></h3>
                                     <p>{{content.content | truncatechars:30 }}</p>

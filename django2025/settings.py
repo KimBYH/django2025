@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
-from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL
+
+from django.conf.global_settings import LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL, MEDIA_URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,6 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-$q#va5e7x0y-ucw&3drn$#3f3rfqq(76z3xa(^vwi!w6+qnoy5'
+
+
+MEDIA_URL="/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
